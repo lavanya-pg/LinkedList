@@ -2,9 +2,47 @@ package linklist;
 
 public class LinkedList
 {
-	public static void main(String[] args)
+	Node head;
+	
+	 class Node
+	 {
+		 int data;
+		 Node next;
+		 
+		 public Node(int data) 
+		 {
+			 this.data = data;
+			 this.next = null;
+		 }
+	 }
+	public void insert (int data)
 	{
-		System.out.println("Welcome To Linked List Program");
+			
+			Node newNode = new Node(data);
+			if (head == null)
+			{
+				head = newNode;
+			}
+			else 
+			{
+				Node temp = head;
+				while(temp.next != null)
+				{
+					temp = temp.next;
+				}
+				temp.next = newNode;
+			}
 	}
+
+		public void print() 
+		{
+			Node temp = head;
+			while(temp!=null) 
+			{
+				System.out.print(temp.data+"->");
+				temp = temp.next;
+			}
+			System.out.println();
+		}
 
 }
