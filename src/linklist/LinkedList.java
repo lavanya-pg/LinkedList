@@ -15,7 +15,7 @@ public class LinkedList
 			 this.next = null;
 		 }
 	 }
-	public void insert (int data)
+	public  Node insert (int data)
 	{
 			
 			Node newNode = new Node(data);
@@ -32,6 +32,7 @@ public class LinkedList
 				}
 				temp.next = newNode;
 			}
+			return newNode;
 	}
 
 		public void print() 
@@ -39,26 +40,24 @@ public class LinkedList
 			Node temp = head;
 			while(temp!=null) 
 			{
-				System.out.print(temp.data+"->");
+				System.out.print(temp.data + "->");
 				temp = temp.next;
 			}
 			System.out.println();
 		}
-		
-		public void append(int data) {
-			 Node newNode = new Node(data);
-			 newNode.next = head;
-			 head = newNode;
-		 }
-
-		public void printf()
+		public void insertAfter(Node prevNode, int value)
 		{
-			Node temp = head;
-			while(temp!=null) 
+
+			if (prevNode == null)
 			{
-				System.out.print(temp.data+"->");
-				temp = temp.next;
+			System.out.println("Previous Node should not be NULL");
+			return;
 			}
-			System.out.println();
-		}
+			
+			Node newNode = new Node(value);
+			newNode.next = prevNode.next;
+			prevNode.next = newNode;
+
+			
+			}
 }
