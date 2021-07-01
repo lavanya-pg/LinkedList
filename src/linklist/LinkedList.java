@@ -57,7 +57,16 @@ public class LinkedList
 			Node newNode = new Node(value);
 			newNode.next = prevNode.next;
 			prevNode.next = newNode;
-
-			
+			}
+		public int pop()
+		{
+			int popData = 0;
+			if (head == null) 
+			{
+			System.out.println("Stack Over Flow");
+			}
+			popData = head.data;
+			head = head.next;
+			return popData;
 			}
 }
