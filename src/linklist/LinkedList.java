@@ -3,6 +3,7 @@ package linklist;
 public class LinkedList
 {
 	Node head;
+	Node tail;
 	
 	 class Node
 	 {
@@ -58,15 +59,27 @@ public class LinkedList
 			newNode.next = prevNode.next;
 			prevNode.next = newNode;
 			}
-		public int pop()
+		public int poplast()
 		{
-			int popData = 0;
 			if (head == null) 
-			{
-			System.out.println("Stack Over Flow");
-			}
-			popData = head.data;
-			head = head.next;
-			return popData;
-			}
+	        {
+	            System.out.println("Empty");
+	        } 
+	        else if (head.next == null) 
+	        {
+	            head = null;
+	        }
+	        else
+	        {
+	            Node n = head;
+	            Node n1 = head;
+	            while (n.next != null)
+	            {
+	                n1 = n;
+	                n = n.next;
+	            }
+	            n1.next = null;
+	        }
+			return 0;
+	    }
 }
