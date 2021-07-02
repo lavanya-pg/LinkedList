@@ -12,7 +12,8 @@ public class Node
 		linkedList.insert(30);
 		linkedList.insert(70);
 		linkedList.print();
-		
+		linkedList.searchNode(30);
+
 		 int poplast = linkedList.poplast();
 		 System.out.println(poplast);
 		

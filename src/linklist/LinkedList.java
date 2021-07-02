@@ -82,4 +82,26 @@ public class LinkedList
 	        }
 			return 0;
 	    }
+		public void searchNode(int data) {  
+	        Node current = head;  
+	        int x = 1;  
+	        boolean flag = false;  
+	        if(head == null) {  
+	            System.out.println("List is empty");  
+	        }  
+	        else {  
+	            while(current != null) {  
+	                if(current.data == data) {  
+	                    flag = true;  
+	                    break;  
+	                }  
+	                x++;  
+	                current = current.next;  
+	            }  
+	        }  
+	        if(flag)  
+	             System.out.println("Element is present in the list at the position : " + x);  
+	        else  
+	             System.out.println("Element is not present in the list");  
+	    }
 }
