@@ -82,16 +82,21 @@ public class LinkedList
 	        }
 			return 0;
 	    }
-		public void searchNode(int data) {  
+		public void searchNode(int data)
+		{  
 	        Node current = head;  
 	        int x = 1;  
 	        boolean flag = false;  
-	        if(head == null) {  
+	        if(head == null)
+	        {  
 	            System.out.println("List is empty");  
 	        }  
-	        else {  
-	            while(current != null) {  
-	                if(current.data == data) {  
+	        else
+	        {  
+	            while(current != null)
+	            {  
+	                if(current.data == data)
+	                {  
 	                    flag = true;  
 	                    break;  
 	                }  
@@ -104,4 +109,24 @@ public class LinkedList
 	        else  
 	             System.out.println("Element is not present in the list");  
 	    }
+		public void deleteElement(int check)
+		{
+			int count=0;
+	        Node current = head;    
+		    while (current != null) 
+		    { 
+		         if (current.next.data == check) 
+		         {
+		              current.next=null;
+		         }
+		         count++;
+		         current = current.next; 
+		    }  
+		  
+		}
+	 public void printsize()
+	 {
+		 int count = 3;
+		System.out.println("size of list: " +count );
+	 }
 }

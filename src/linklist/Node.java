@@ -13,12 +13,11 @@ public class Node
 		linkedList.insert(40);
 		linkedList.insert(70);
 		linkedList.print();
-		linkedList.searchNode(30);
-
-		 int poplast = linkedList.poplast();
-		 System.out.println(poplast);
-		
-		linkedList.print();
+		linkedList.deleteElement(40);
+	    linkedList.printsize();
+	    linkedList.insert(70);
+   	    linkedList.print();
+	      
 
 	}
 
