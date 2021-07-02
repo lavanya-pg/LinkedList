@@ -10,6 +10,7 @@ public class Node
 		LinkedList linkedList = new LinkedList();
 		linkedList.insert(56);
 		linkedList.insert(30);
+		linkedList.insert(40);
 		linkedList.insert(70);
 		linkedList.print();
 		linkedList.searchNode(30);
